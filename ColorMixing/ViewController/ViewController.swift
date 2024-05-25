@@ -29,6 +29,8 @@ final class ViewController: UIViewController {
     private lazy var threeColorButton = UIButton(primaryAction: showColorPicker())
     private lazy var fourColorButton = UIButton(primaryAction: showColorPicker())
     
+    private var language = UISegmentedControl(items: ["EN","RU"])
+    
     private var activeButton: UIButton?
     private var activeLabel: UILabel?
     
@@ -134,6 +136,7 @@ private extension ViewController {
         setupButtons(firstColorButton, secondColorButton, threeColorButton, fourColorButton)
         setupResultNameColorLabel()
         setupResultColorView()
+        setupLanguage()
     }
     
     func setupTitleLabel() {
@@ -216,7 +219,7 @@ private extension ViewController {
             secondView.topAnchor.constraint(equalTo: firstView.bottomAnchor, constant: 50),
             secondView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
             secondView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
-            secondView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            secondView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40),
             
             resultNameColorLabel.topAnchor.constraint(equalTo: secondView.topAnchor),
             resultNameColorLabel.leadingAnchor.constraint(equalTo: secondView.leadingAnchor),
@@ -268,5 +271,18 @@ private extension ViewController {
         resultColorView.layer.borderWidth = 5
         resultColorView.layer.borderColor = UIColor.white.cgColor
         resultColorView.layer.cornerRadius = 15
+    }
+    
+    func setupLanguage() {
+        view.addSubview(language)
+        language.selectedSegmentIndex = 0
+        language.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            language.heightAnchor.constraint(equalToConstant: 30),
+            language.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            language.leadingAnchor.constraint(equalTo: secondView.leadingAnchor),
+            language.trailingAnchor.constraint(equalTo: secondView.trailingAnchor)
+        ])
     }
 }
