@@ -35,4 +35,16 @@ extension UIColor {
         
         return blendedColor
     }
+    
+    var redValue: CGFloat{
+        return cgColor.components! [0]
+    }
+    
+    var greenValue: CGFloat{
+        return cgColor.components! [1]
+    }
+    
+    var blueValue: CGFloat{
+        return cgColor.components! [2]
+    }
 }
