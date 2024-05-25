@@ -13,6 +13,7 @@
 		FA1F83A82C02001A00807AEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1F83A62C02001A00807AEA /* Main.storyboard */; };
 		FA1F83AA2C02001C00807AEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1F83A92C02001C00807AEA /* Assets.xcassets */; };
 		FA1F83AD2C02001C00807AEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1F83AB2C02001C00807AEA /* LaunchScreen.storyboard */; };
+		FA68E8502C020E2C00ACE868 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68E84F2C020E2C00ACE868 /* UIColor + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FA1F83A92C02001C00807AEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA1F83AC2C02001C00807AEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA1F83AE2C02001C00807AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA68E84F2C020E2C00ACE868 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				FA1F83A02C02001A00807AEA /* AppDelegate.swift */,
 				FA1F83A22C02001A00807AEA /* SceneDelegate.swift */,
 				FA1F83A42C02001A00807AEA /* ViewController.swift */,
+				FA68E84F2C020E2C00ACE868 /* UIColor + Extension.swift */,
 				FA1F83A62C02001A00807AEA /* Main.storyboard */,
 				FA1F83A92C02001C00807AEA /* Assets.xcassets */,
 				FA1F83AB2C02001C00807AEA /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1F83A52C02001A00807AEA /* ViewController.swift in Sources */,
+				FA68E8502C020E2C00ACE868 /* UIColor + Extension.swift in Sources */,
 				FA1F83A12C02001A00807AEA /* AppDelegate.swift in Sources */,
 				FA1F83A32C02001A00807AEA /* SceneDelegate.swift in Sources */,
 			);
@@ -307,9 +311,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alexpetrenko.ColorMixing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -335,9 +342,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alexpetrenko.ColorMixing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
